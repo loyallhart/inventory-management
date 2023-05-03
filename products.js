@@ -30,5 +30,11 @@ axios.get('/api/inventory')
     document.getElementById('out-of-stock-products').textContent = outOfStockProducts;
     document.getElementById('damaged-inventory').textContent = damagedInventory;
     document.getElementById('internal-products').textContent = internalProducts;
+    // 
+  
   })
   .catch(error => console.log(error));
+
+  const div = document.getElementById("dropdown");
+  div.style.display = "none";
+  

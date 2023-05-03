@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* login page */
 /* .padlock image {
     margin-right: 45% !important;
@@ -87,3 +88,52 @@
     background-color: #0062cc;
   }
   
+=======
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url(./images/backgroundp2.jpg);
+    background-size: cover;
+}
+
+p{
+    font-size: 2rem;
+    color: aliceblue;
+}
+.title2{
+    color: rgb(244, 248, 248);
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+.products-container{
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: nowrap; */
+}
+
+/* dropdown for images */
+.table-information{
+background-color: aqua;
+width: 150vh;
+height: 300px;
+margin-left: 200px;
+}
+
+.dropdown{
+
+}
+
+@media screen and (min-width: 768px) {
+    .title2 {
+      font-size: 5rem;
+      text-align: left;
+    }
+  }
+>>>>>>> 514a726f054a4a0029a2fa5e786dfdc4f8eb1503
