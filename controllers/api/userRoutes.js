@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+let validPassword
+let userDataJson
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -18,31 +21,23 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await Users.findOne({ where: { name: req.body.user } })
 
-    if (!userData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
-      return;
+    if (userData) {
+      userDataJson = userData.toJSON()
+      validPassword = await userData.checkPass(req.body.password)
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
-
-    if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
-      return;
+    if (userData && validPassword) {
+      req.session.save(() => {
+        req.session.user_id = userDataJson.id
+        req.session.logged_in = true
+        res.json({ user: userDataJson, message: 'You are now logged in!' })
+      })
     }
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-      
-      res.json({ user: userData, message: 'You are now logged in!' });
-    });
-
+    
+    res.status(400)
+    .json({ message: 'Incorrect email or password, please try again' });
   } catch (err) {
     res.status(400).json(err);
   }
