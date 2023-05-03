@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Total Products/Inventory"
+    },
+    {
+      "name": "Low Stock Products"
+    },
+    {
+      "name": "Out of Stock Products"
+    },
+    {
+      "name": "Damaged Inventory"
+    },
+    {
+      "name": "Products Deployed Internally"
+    }
+  ]
