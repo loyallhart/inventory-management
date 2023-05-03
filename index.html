@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Management</title>
+  <title>Inventory Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Raleway&display=swap" rel="stylesheet">
+  <img src="../inventory-management/images/backgroundp2.jpg" alt="background of login page" class="img-fluid rounded mx-auto my-4">
+
 </head>
-<body>
-    
+<body> 
+    <div class="container">
+        <form class="form-signin">
+          <h2 class="form-signin-heading">Login</h2>
+          <label for="inputUsername" class="sr-only">Username</label>
+          <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </form>
+      </div>  
+
+PAGE 2
+<header>
+    <h1>Inventory Dashboard</h1>
+  </header>
+  <div class="container">
+    <div class="card">
+      <h2>Total Products/Inventory</h2>
+      <p id="total-products">0</p>
+    </div>
+    <div class="card">
+      <h2>Low Stock Products</h2>
+      <p id="low-stock-products">0</p>
+    </div>
+    <div class="card">
+      <h2>Out of Stock Products</h2>
+      <p id="out-of-stock-products">0</p>
+    </div>
+    <div class="card">
+      <h2>Damaged Inventory</h2>
+      <p id="damaged-inventory">0</p>
+    </div>
+    <div class="card">
+      <h2>Products Deployed Internally</h2>
+      <p id="internal-products">0</p>
+    </div>
+  </div>
+
+<img src="../inventory-management/images/deployed.png" class="img-fluid" alt="">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
