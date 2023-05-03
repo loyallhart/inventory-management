@@ -29,3 +29,13 @@ function loginUser() {
       console.error(error);
     });
   }
+
+  function s() {
+    document.querySelector('.notification').classList.remove('hidden');
+    document.querySelector('.question').classList.add("hidden")
+    setTimeout(() => {
+      document.querySelector('.notification').classList.add("hidden");
+      document.querySelector('.question').classList.remove("hidden");
+    }, 1000)
+
+  }
