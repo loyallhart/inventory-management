@@ -27,12 +27,9 @@
   }
   .padlock{
     /* background-color: #fff; */
-    width: 800px;
-    height: 800px;
-    /* flex-direction: row-reverse; */
-    /* justify-content: center; */
-    /* flex-direction: row; */
-    /* position: fixed; */
+    width: 500px;
+    height: 500px;
+    /* border-radius: 20%; */
     
     
 }
@@ -41,11 +38,17 @@
     /* width: 900px !important; */
     /* height: 900px !important; */
     /* background-color: #fff; */
-    border-radius: 10px;
-    padding: 40px;
+    /* border-radius: 10px; */
+    /* padding: 40px; */
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
     /* flex-direction: row; */
     /* position: fixed; */
+    color: white;
+    font-family: Raleway;
+    font-style: bold;
+    font-size: 300px;
+    margin-right: 30%; 
+     /* margin-left: 30%; */
   } 
 
   
