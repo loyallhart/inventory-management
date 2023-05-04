@@ -1,15 +1,6 @@
 <<<<<<< HEAD
 /* login page */
-/* .padlock image {
-    margin-right: 45% !important;
-    margin-left: 45% !important;
-    border-radius: 90%;  
-  }
 
-  .login blocks {
-    width: 300px !important;
-    height: 175px !important;
-  }  
   .hidden {
     display: none
   }
@@ -25,28 +16,36 @@
     /* width: 400px; */
     /* margin: 50px auto; */
     /* background-color: #fff; */
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    /* display: flex !important; */
+    /* flex-direction: row; */
+    border-radius: 40px;
+    padding: 70px;
+    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
     background-image: url("./images/login.jpg");
     background-size: contain;
-
+    /* align-items: flex-start; */
   }
   .padlock{
     /* background-color: #fff; */
     width: 800px;
     height: 800px;
-    position: center;
-    }
+    /* flex-direction: row-reverse; */
+    /* justify-content: center; */
+    /* flex-direction: row; */
+    /* position: fixed; */
+    
+    
+}
   
-    .login blocks {
-    width: 500px !important;
-    height: 500px !important;
+    .form-signin {
+    /* width: 900px !important; */
+    /* height: 900px !important; */
     /* background-color: #fff; */
     border-radius: 10px;
     padding: 40px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-
+    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
+    /* flex-direction: row; */
+    /* position: fixed; */
   } 
 
   

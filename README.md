@@ -19,6 +19,7 @@ screenshots
 
 ## Credits
 Collaborators:
+
 loyallhart
 github: https://github.com/loyallhart
 
@@ -35,3 +36,4 @@ nebeekha
 github: https://github.com/nabeekha
 
 ## License
+MIT License
