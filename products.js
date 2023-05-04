@@ -34,7 +34,7 @@ axios.get('/api/inventory')
   
   })
   .catch(error => console.log(error));
-
+// when user clicks on an icon, a table with information will show 
   const div = document.getElementById("dropdown");
   div.style.display = "none";
   
