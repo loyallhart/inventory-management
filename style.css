@@ -28,16 +28,16 @@
     /* margin-right: 50%;
     margin-left: 50%; */
   }
-  .box{
+  /* .box{
     margin-right: 50%;
     margin-left: 50%;
     flex-direction: column;
     display: flex !important;
     justify-content: center !important;
-  }
+  } */
   .padlock{
     /* background-color: #fff;  */
-    width: 800px;
+    width: 500px;
     height: 500px; 
     /* position: center; */
     /* border-radius: 20%; */
@@ -53,8 +53,8 @@
     height: 500px !important;
   }
     .form-signin {
-    width: 900px !important; 
-    height: 900px !important;
+    width: 500px !important; 
+    height: 500px !important;
     /* background-color: #fff; */
     /* border-radius: 10px; */
     /* padding: 40px; */
