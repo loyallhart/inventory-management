@@ -1,14 +1,13 @@
 async function submitLogin(event){
     event.preventDefault()
-    let user = document.querySelector('#inputUsername').value.trim()
+    let username = document.querySelector('#inputUsername').value.trim()
     let password = document.querySelector('#inputPassword').value.trim()
-console.log(user, password)
-    if (user && password){
+    if (username && password){
         try{
             console.log('if')
             const response = await fetch('/api/user/login', {
                 method: 'POST',
-                body: JSON.stringify({ user, password }),
+                body: JSON.stringify({ username, password }),
                 headers: { 'Content-Type': 'application/json' }
               })
 

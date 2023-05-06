@@ -3,25 +3,26 @@ const { Users } = require('../../models');
 
 router.post('/login', async (req, res) => {
   try {
-    console.log(req.session)
     let validPassword
     let userDataJson
-
-    const userData = await Users.findOne({ where: { username: req.body.user } })
-    if (userData) {
-      userDataJson = userData.toJSON()
-      validPassword = (req.body.password === userDataJson.password) ? true : false
-    }
-console.log(userDataJson)
-    if (userData && validPassword) {
-      req.session.save(() => {
-        req.session.user_id = userDataJson.id
-        req.session.logged_in = true
-        res.status(200).json({ user: userDataJson, message: 'You are now logged in!' })
-      })
-    }else{    
-      res.status(400)
-      .json({ message: 'Incorrect username or password, please try again' });
+    if (req.session.logged_in){
+      res.sendStatus(301)
+    }else{
+      const userData = await Users.findOne({ where: { username: req.body.username } })
+      if (userData) {
+        userDataJson = userData.toJSON()
+        validPassword = (req.body.password === userDataJson.password) ? true : false
+      }
+      if (userData && validPassword) {
+        req.session.save(() => {
+          req.session.user_id = userDataJson.id
+          req.session.logged_in = true
+          res.status(200).json({ user: userDataJson, message: 'You are now logged in!' })
+        })
+      }else{    
+        res.status(400)
+        .json({ message: 'Incorrect username or password, please try again' });
+      }
     }
   } catch (err) {
     res.status(400).json(err);
