@@ -1,8 +1,41 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { Users } = require('../../models');
 
-let validPassword
-let userDataJson
+router.post('/login', async (req, res) => {
+  try {
+    let validPassword
+    let userDataJson
+
+    const userData = await Users.findOne({ where: { username: req.body.user } })
+    if (userData) {
+      userDataJson = userData.toJSON()
+      validPassword = (req.body.password === userDataJson.password) ? true : false
+    }
+
+    if (userData && validPassword) {
+      req.session.save(() => {
+        req.session.user_id = userDataJson.id
+        req.session.logged_in = true
+      })
+      res.status(200).json({ user: userDataJson, message: 'You are now logged in!' })
+    }else{    
+      res.status(400)
+      .json({ message: 'Incorrect username or password, please try again' });
+    }
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 router.post('/', async (req, res) => {
   try {
@@ -16,40 +49,6 @@ router.post('/', async (req, res) => {
     });
   } catch (err) {
     res.status(400).json(err);
-  }
-});
-
-router.post('/login', async (req, res) => {
-  try {
-    const userData = await Users.findOne({ where: { name: req.body.user } })
-
-    if (userData) {
-      userDataJson = userData.toJSON()
-      validPassword = await userData.checkPass(req.body.password)
-    }
-
-    if (userData && validPassword) {
-      req.session.save(() => {
-        req.session.user_id = userDataJson.id
-        req.session.logged_in = true
-        res.json({ user: userDataJson, message: 'You are now logged in!' })
-      })
-    }
-    
-    res.status(400)
-    .json({ message: 'Incorrect email or password, please try again' });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-router.post('/logout', (req, res) => {
-  if (req.session.logged_in) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
   }
 });
 

@@ -9,8 +9,8 @@ router.use('/api', apiRoutes);
 router.use('/reports',reportRoutes)
 router.use('/', homeRoutes);
 
-router.use('*',(req,res)=>{
-    res.redirect('/')
-})
+// router.use('*',(req,res)=>{
+//     res.redirect('/')
+// })
 
 module.exports = router;
