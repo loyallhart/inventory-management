@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Product A",
+      "model": "A-100",
+      "manufacturer": "Manufacturer X",
+      "purchaseDate": "2022-01-01",
+      "quantity": 10,
+      "status": "in stock",
+      "owner": null,
+      "categoryId": 1
+    },
+    {
+      "name": "Product B",
+      "model": "B-200",
+      "manufacturer": "Manufacturer Y",
+      "purchaseDate": "2022-02-01",
+      "quantity": 5,
+      "status": "damaged",
+      "owner": null,
+      "categoryId": 2
+    },
+    {
+      "name": "Product C",
+      "model": "C-300",
+      "manufacturer": "Manufacturer Z",
+      "purchaseDate": "2022-03-01",
+      "quantity": 0,
+      "status": "out of stock",
+      "owner": null,
+      "categoryId": 3
+    }
+  ]
