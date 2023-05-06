@@ -1,5 +1,6 @@
 const Category = require('./category')
 const Product = require('./products')
+const Users = require('./users')
 const ProductCategory = require('./productCategory')
 const sequelize = require('../config/connection');
 
@@ -13,4 +14,4 @@ Product.belongsToMany(Category, {
     foreignKey: 'product_id'
   });
   
-  module.exports = { Product, Category, ProductCategory };
+  module.exports = { Product, Users, Category, ProductCategory };

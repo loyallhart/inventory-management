@@ -1,14 +1,19 @@
 const sequelize = require('../config/connection');
+const { Users } = require('../models')
 const { Product, Category, ProductCategory } = require('../models');
 const categorySeedData = require('./categorySeedData.json');
 const productSeedData = require('./productSeedData.json');
+const userSeedData = require('./userSeedData.json')
 
 // seed db function
 const seedDB = async () => {
   await sequelize.sync({ force: true });
 
+  const users = await Users.bulkCreate(userSeedData);
+
   const categories = await Category.bulkCreate(categorySeedData);
   const products = await Product.bulkCreate(productSeedData);
+  //running into bugs here
 
   // Create an array of product_category data to bulk create
   const productCategorySeedData = products.map((product) => {
