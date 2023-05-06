@@ -3,6 +3,7 @@ const { Users } = require('../../models');
 
 router.post('/login', async (req, res) => {
   try {
+    console.log(req.session)
     let validPassword
     let userDataJson
 
@@ -11,13 +12,13 @@ router.post('/login', async (req, res) => {
       userDataJson = userData.toJSON()
       validPassword = (req.body.password === userDataJson.password) ? true : false
     }
-
+console.log(userDataJson)
     if (userData && validPassword) {
       req.session.save(() => {
         req.session.user_id = userDataJson.id
         req.session.logged_in = true
+        res.status(200).json({ user: userDataJson, message: 'You are now logged in!' })
       })
-      res.status(200).json({ user: userDataJson, message: 'You are now logged in!' })
     }else{    
       res.status(400)
       .json({ message: 'Incorrect username or password, please try again' });
