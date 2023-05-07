@@ -11,7 +11,7 @@
     transform: translateX(-10%);
   } 
   
-  .containers {
+  .body {
     /* width: 10px; */
     /* margin: 50px auto; */
     /* background-color: #fff; */
@@ -24,7 +24,7 @@
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
     background-image: url("./images/login.jpg");
     /* background-size: contain; */
-    background-size: cover;
+    /* background-size: cover; */
     flex-direction: column;
     /* margin-right: 50%;
     margin-left: 50%; */
@@ -51,35 +51,58 @@
     /* opacity: 60%; */
     /* transition: opacity 0.5s ease-in-out; */
 }
-  .img-fluid{
-    width: 800px !important;
-    height: 500px !important;
-  }
+  /* .img-fluid{
+    width: 9000px !important;
+    height: 9000px !important;
+  } */
     .form-signin {
-    width: 500px !important; 
-    height: 500px !important;
+    width: 1500px !important; 
+    height: 600px !important;
     /* background-color: #fff; */
     /* border-radius: 10px; */
     /* padding: 40px; */
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-    /* flex-direction: row; */
-    position: fixed;
+    flex-direction: column-reverse;
+    position: absolute;
     color: white;
-    font-family: Raleway;
+    /* font-family: Raleway; */
     font-style: bold;
-    font-size: 1000px;
-    margin: 0 50px; 
-    bottom: 50px ; 
-    filter:contrast(50%)
+    font-size: 5000px;
+    text-align: center;
+
+    /* margin: 0 50px;  */
+    bottom: 1000px ; 
+    filter:contrast(90%)
+    /* background-image: url("./images/login.jpg"); */
+
 } 
 
 /* Sign up */
 .signup{
-background-image: url("./images/login.jpg");
-background-size: cover;
+/* background-image: url("./images/login.jpg"); */
+width: 1500px !important; 
+height: 600px !important;
+/* background-size: cover; */
+text-align: center;
+color: white;
+/* width: 500px !important;  */
+/* height: 500px !important; */
+position: center;
+
+/* font-family: Raleway; */
+/* font-style: bold; */
+/* font-size: 1000px; */
+margin-right: 25%; 
+margin-left: 30%;
+/* bottom: 20px ; */
+filter:contrast(90%)
+}
+body {
+  background-image: url(./images/backgroundp2.jpg);
+  background-size: cover;
 }
 
-  
+/* Page 2*/
   h2 {
     text-align: center;
     font-size: 2.5rem;
