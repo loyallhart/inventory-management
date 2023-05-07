@@ -1,14 +1,14 @@
 [
     {
-        "username": "john_doe",
+        "email": "john_doe",
         "password": "password123"
     },
     {
-        "username": "jane_smith",
+        "email": "jane_smith",
         "password": "secret456"
     },
     {
-        "username": "bob_smith",
+        "email": "bob_smith",
         "password": "pass123"
     }
 ]
