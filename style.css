@@ -38,17 +38,17 @@
   }
   .padlock{
     /* background-color: #fff;  */
-    width: 500px;
-    height: 500px; 
+    /* width: 500px;
+    height: 500px;  */
     /* position: center; */
     /* border-radius: 20%; */
     margin-right: 10% ;
     margin-left: 5%;
     /* border-radius: 90%; */
     /* position:absolute; */
-    display: flex;
+    /* display: flex; */
     /* bottom: 1400px; */
-    /* opacity: 60%; */
+    opacity: 60%;
     /* transition: opacity 0.5s ease-in-out; */
 }
   .img-fluid{
@@ -107,24 +107,19 @@ body {
   margin-bottom: 10%;
   margin-top: 15%;
 }
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
-/* Producs Page 2*/
-  h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
   
-  .form-class {
+  /* .form-class {
     margin-bottom: 20px;
-  }
+  } */
   
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+
   
   input[type="text"], input[type="password"] {
     width: 100%;
@@ -148,7 +143,7 @@ body {
   }
   
   button.btn:hover {
-    background-color: #0062cc;
+    background-color: #327bc9;
   }
   
 .container{
@@ -156,6 +151,14 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+
+/* Products Page 2*/
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 .body2 {
     background-image: url(./images/backgroundp2.jpg);
@@ -165,11 +168,11 @@ p{
     font-size: 2rem;
     color: aliceblue;
 }
-.title2{
+/* .title2{
     color: rgb(244, 247, 247);
     font-size: 7rem;
     text-align: center;
-}
+} */
 .products-container{
     display: flex;
     justify-content: space-around;
