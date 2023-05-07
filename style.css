@@ -12,40 +12,41 @@
   } 
   
   .body {
-    /* width: 10px; */
-    /* margin: 50px auto; */
+    width: 10px;
+    /* margin: 5000px ; */
     /* background-color: #fff; */
     /* display: flex !important; */
     /* flex-direction: row; */
     /* border-radius: 40px; */
-     padding: 650px;
+     /* padding: 650px; */
     /* display: flex !important;
     justify-content: center !important; */
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-    /* background-image: url("./images/login.jpg"); */
-    /* background-size: contain; */
-    /* background-size: cover; */
+    background-image: url(./images/login.jpg);
+    background-position: cover;    
+    /* background-size: 300%; */
     /* flex-direction: column; */
-    /* margin-right: 50%;
-    margin-left: 50%; */
+     margin-right: 50%;
+    margin-left: 100%;
+    
   }
   .box{
-    margin-right: 50%;
-    margin-left: 50%;
+    margin-right: 80%;
+    margin-left: 45%;
     /* flex-direction: column; */
     display: flex !important;
     justify-content: center !important;
   }
   .padlock{
     /* background-color: #fff;  */
-    width: 500px;
-    height: 500px; 
+    width: 200px;
+    height: 200px; 
     /* position: center; */
     /* border-radius: 20%; */
-    margin-right: 10% ;
-    margin-left: 5%;
+    margin-right: 80% !important;
+    margin-left: 35% !important;
     /* border-radius: 90%; */
-    /* position:absolute; */
+    position: absolute;
     display: flex;
     /* bottom: 1400px; */
     /* opacity: 60%; */
@@ -59,19 +60,20 @@
     .form-signin {
     width: 1000px !important; 
     height: 6000px !important;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 40px;
     margin-top: 10%;
-    margin-bottom: 600%;
+    margin-bottom: 5000%;
+    margin-left: 10;
+    margin-right: 20%;
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
     flex-direction: column-reverse;
     position: fixed;
     color: white;
     /* font-family: Raleway; */
     font-style: bold;
-    /* font-size: 9000px; */
-    text-align: center;
-
+    /* font-size: medium; */
+    text-align: left;
     /* margin: 0 50px;  */
     /* bottom: 1000px ;  */
     /* filter:contrast(90%) */
@@ -94,18 +96,18 @@ position: center;
 /* font-family: Raleway; */
 /* font-style: bold; */
 /* font-size: 1000px; */
-margin-right: 25%; 
-margin-left: 30%;
+margin-right: -20%; 
+margin-left: 10%;
 /* bottom: 90px ; */
 filter:contrast(90%)
 }
 body {
-  background-image: url(./images/login.jpg);
+  background-image: url(./images/backgroundp2.jpg);
   background-size: cover;
-  margin-right: 15%;
-  margin-left: -30%;
-  margin-bottom: 10%;
-  margin-top: 15%;
+  margin-right: 5%;
+  /* margin-left: 10%; */
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 /* Producs Page 2*/
@@ -121,13 +123,15 @@ body {
   
   label {
     display: block;
-    margin-bottom: 5px;
-    font-size: 1.2rem;
+    /* margin-bottom: 5px; */
+    font-size: 1rem;
     font-weight: bold;
+    margin-left: 40%;
+    margin-right: 50%;
   }
   
   input[type="text"], input[type="password"] {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
