@@ -31,7 +31,7 @@
   .box{
     margin-right: 50%;
     margin-left: 50%;
-    flex-direction: column;
+    /* flex-direction: column; */
     display: flex !important;
     justify-content: center !important;
   }
@@ -39,7 +39,7 @@
     /* background-color: #fff;  */
     width: 500px;
     height: 500px; 
-    /* position: center; */
+    position: center;
     /* border-radius: 20%; */
     /* margin: 30px ; */
     /* margin-left: 40px; */
@@ -70,8 +70,7 @@
     margin: 0 50px; 
     bottom: 50px ; 
     filter:contrast(50%)
-    /* opacity: 60%; */
-    /* transition: opacity 0.5s ease-in-out; */
+  
 } 
 
   
