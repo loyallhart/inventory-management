@@ -30,5 +30,11 @@ axios.get('/api/inventory')
     document.getElementById('out-of-stock-products').textContent = outOfStockProducts;
     document.getElementById('damaged-inventory').textContent = damagedInventory;
     document.getElementById('internal-products').textContent = internalProducts;
+    // 
+  
   })
   .catch(error => console.log(error));
+// when user clicks on an icon, a table with information will show 
+  const div = document.getElementById("dropdown");
+  div.style.display = "none";
+  
