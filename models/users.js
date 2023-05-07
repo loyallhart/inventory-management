@@ -46,9 +46,7 @@ Users.init(
             await newUserData.setPassword(newUserData.password);
           },
           beforeUpdate: async (updatedUserData) => {
-            if (updatedUserData.password) {
               await updatedUserData.setPassword(updatedUserData.password);
-            }
           },
         },
         sequelize,
