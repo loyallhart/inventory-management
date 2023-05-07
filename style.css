@@ -19,6 +19,8 @@
     /* flex-direction: row; */
     /* border-radius: 40px; */
      /* padding: 650px; */
+    border-radius: 40px;
+    padding: 70px;
     /* display: flex !important;
     justify-content: center !important; */
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
@@ -48,9 +50,16 @@
     /* border-radius: 90%; */
     position: absolute;
     display: flex;
+    /* width: 500px;
+    height: 500px;  */
+    /* position: center; */
+    /* border-radius: 20%; */
+    /* margin-right: 35% ; */
+    /* margin-left: 5%; */
+    border-radius: 90%;
+    /* position:absolute; */
+    /* display: flex; */
     /* bottom: 1400px; */
-    /* opacity: 60%; */
-    /* transition: opacity 0.5s ease-in-out; */
 }
   .img-fluid{
     width: 9000px !important;
@@ -67,8 +76,8 @@
     margin-left: 10;
     margin-right: 20%;
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-    flex-direction: column-reverse;
-    position: fixed;
+    /* flex-direction: row; */
+    /* position: fixed; */
     color: white;
     /* font-family: Raleway; */
     font-style: bold;
@@ -79,7 +88,9 @@
     /* filter:contrast(90%) */
     /* background-image: url("./images/login.jpg"); */
 
-} 
+    font-size: 1000px;
+    /* margin-right: 30%;  */
+    bottom: 100px ;  } 
 
 /* Sign up page 3*/
 .signup{
@@ -109,17 +120,17 @@ body {
   margin-bottom: 5%;
   margin-top: 5%;
 }
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
-/* Producs Page 2*/
-  h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
   
-  .form-class {
+  /* .form-class {
     margin-bottom: 20px;
-  }
+  } */
   
   label {
     display: block;
@@ -129,6 +140,7 @@ body {
     margin-left: 40%;
     margin-right: 50%;
   }
+
   
   input[type="text"], input[type="password"] {
     width: 50%;
@@ -152,7 +164,7 @@ body {
   }
   
   button.btn:hover {
-    background-color: #0062cc;
+    background-color: #327bc9;
   }
   
 .container{
@@ -160,6 +172,14 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+
+/* Products Page 2*/
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 .body2 {
     background-image: url(./images/backgroundp2.jpg);
@@ -169,11 +189,11 @@ p{
     font-size: 2rem;
     color: aliceblue;
 }
-.title2{
+/* .title2{
     color: rgb(244, 247, 247);
     font-size: 7rem;
     text-align: center;
-}
+} */
 .products-container{
     display: flex;
     justify-content: space-around;

@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const { Product, Category, Users } = require('../../models');
 
-router.put('/product/:id', async (req, res) => {
+router.delete('/product/:id', async (req, res) => {
     try {
       if (!req.session.logged_in) {
         res.sendStatus(401) 
         return
       }
-      Product.update(req.body, {where:{id:req.params.id}})
+      Product.destroy({where:{id:req.params.id}})
       .then((prod) => {
-        res.status(200).json({message:'Product Updated!'})
+        res.status(200).json({message:'Product Deleted!'})
       }).catch((err) => {
         res.status(500).json({message:"Database Error"})
       })
@@ -18,15 +18,15 @@ router.put('/product/:id', async (req, res) => {
     }
 });
 
-router.put('/category/:id', async (req, res) => {
+router.delete('/category/:id', async (req, res) => {
   try {
     if (!req.session.logged_in) {
       res.sendStatus(401) 
       return
     }
-    Category.update(req.body, {where:{id:req.params.id}})
+    Category.destroy({where:{id:req.params.id}})
     .then((cat) => {
-      res.status(200).json({message:'Category Updated!'})
+      res.status(200).json({message:'Category Deleted!'})
     }).catch((err) => {
       res.status(500).json({message:"Database Error"})
     })
@@ -35,15 +35,15 @@ router.put('/category/:id', async (req, res) => {
   }
 });
 
-router.put('/user/:id', async (req, res) => {
+router.delete('/user/:id', async (req, res) => {
   try {
     if (!req.session.logged_in) {
       res.sendStatus(401) 
       return
     }
-    Users.update(req.body, {where:{id:req.params.id}})
+    Users.destroy({where:{id:req.params.id}})
     .then((user) => {
-      res.status(200).json({message:'User Updated!'})
+      res.status(200).json({message:'User Deleted!'})
     }).catch((err) => {
       res.status(500).json({message:"Database Error"})
     })

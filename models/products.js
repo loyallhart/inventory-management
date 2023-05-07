@@ -1,6 +1,6 @@
 const { Model, DataTypes} = require('sequelize')
 const sequelize = require('../config/connection') 
-const Category = require('./category')
+const Category = require('../models/category')
 
 //creating Product Model
 class Product extends Model {}
@@ -35,21 +35,21 @@ Product.init(
             allowNull: false
           },
           status: {
-            type: DataTypes.ENUM('deployed', 'damaged', 'in stock'),
+            type: DataTypes.STRING,
             allowNull: false
           },
           owner: {
             type: DataTypes.STRING,
             allowNull: true
-          },
-          categoryId: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-              model: Category,
-              key: 'id'
-            }
           }
+        //   categoryId: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     references: {
+        //       model: 'category',
+        //       key: 'id'
+        //     }
+        //   }
     },
     {
         sequelize,

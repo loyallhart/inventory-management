@@ -1,10 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Product = require('../models/products');
 
-class Category extends Model {}
+class Users extends Model {}
 
-Category.init(
+Users.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,18 +11,22 @@ Category.init(
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category'
+    modelName: 'users'
   }
 );
 
-module.exports = Category;
+module.exports = Users
