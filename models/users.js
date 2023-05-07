@@ -24,6 +24,10 @@ Users.init(
           primaryKey: true,
           autoIncrement: true,
         },
+        username:{
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
         email: {
           type: DataTypes.STRING,
           allowNull: false,
@@ -46,14 +50,16 @@ Users.init(
             await newUserData.setPassword(newUserData.password);
           },
           beforeUpdate: async (updatedUserData) => {
+            if (updatedUserData.password){
               await updatedUserData.setPassword(updatedUserData.password);
+            }
           },
         },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'users',
       }
     );
     
