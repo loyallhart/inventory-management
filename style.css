@@ -1,4 +1,4 @@
-/* login page */
+/* login page page 1 */
 
   .hidden {
     display: none
@@ -22,10 +22,10 @@
     /* display: flex !important;
     justify-content: center !important; */
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
-    background-image: url("./images/login.jpg");
+    /* background-image: url("./images/login.jpg"); */
     /* background-size: contain; */
     /* background-size: cover; */
-    flex-direction: column;
+    /* flex-direction: column; */
     /* margin-right: 50%;
     margin-left: 50%; */
   }
@@ -42,42 +42,44 @@
     height: 500px; 
     /* position: center; */
     /* border-radius: 20%; */
-    /* margin: 30px ; */
-    /* margin-left: 90px; */
+    margin-right: 10% ;
+    margin-left: 5%;
     /* border-radius: 90%; */
     /* position:absolute; */
-    /* display: flex; */
+    display: flex;
     /* bottom: 1400px; */
     /* opacity: 60%; */
     /* transition: opacity 0.5s ease-in-out; */
 }
-  /* .img-fluid{
+  .img-fluid{
     width: 9000px !important;
     height: 9000px !important;
-  } */
+  }
+
     .form-signin {
-    width: 1500px !important; 
-    height: 600px !important;
-    /* background-color: #fff; */
-    /* border-radius: 10px; */
-    /* padding: 40px; */
+    width: 1000px !important; 
+    height: 6000px !important;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 10%;
+    margin-bottom: 600%;
     /* box-shadow: 0px 0px 10px rgba(0,0,0,0.2); */
     flex-direction: column-reverse;
-    position: absolute;
+    position: fixed;
     color: white;
     /* font-family: Raleway; */
     font-style: bold;
-    font-size: 5000px;
+    /* font-size: 9000px; */
     text-align: center;
 
     /* margin: 0 50px;  */
-    bottom: 1000px ; 
-    filter:contrast(90%)
+    /* bottom: 1000px ;  */
+    /* filter:contrast(90%) */
     /* background-image: url("./images/login.jpg"); */
 
 } 
 
-/* Sign up */
+/* Sign up page 3*/
 .signup{
 /* background-image: url("./images/login.jpg"); */
 width: 1500px !important; 
@@ -94,15 +96,19 @@ position: center;
 /* font-size: 1000px; */
 margin-right: 25%; 
 margin-left: 30%;
-/* bottom: 20px ; */
+/* bottom: 90px ; */
 filter:contrast(90%)
 }
 body {
-  background-image: url(./images/backgroundp2.jpg);
+  background-image: url(./images/login.jpg);
   background-size: cover;
+  margin-right: 15%;
+  margin-left: -30%;
+  margin-bottom: 10%;
+  margin-top: 15%;
 }
 
-/* Page 2*/
+/* Producs Page 2*/
   h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -151,7 +157,7 @@ body {
     height: 100%;
     overflow: hidden;
 }
-body {
+.body2 {
     background-image: url(./images/backgroundp2.jpg);
     background-size: cover;
 }
