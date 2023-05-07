@@ -28,13 +28,13 @@
     /* margin-right: 50%;
     margin-left: 50%; */
   }
-  /* .box{
+  .box{
     margin-right: 50%;
     margin-left: 50%;
     flex-direction: column;
     display: flex !important;
     justify-content: center !important;
-  } */
+  }
   .padlock{
     /* background-color: #fff;  */
     width: 500px;
