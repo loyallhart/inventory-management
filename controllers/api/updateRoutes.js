@@ -1,16 +1,23 @@
 const router = require('express').Router();
 const { Product, Category, Users } = require('../../models');
-
+const {transporter, options} = require('../../nodemailer')
 router.put('/product/:id', async (req, res) => {
     try {
       if (!req.session.logged_in) {
         res.sendStatus(401) 
         return
       }
+
       Product.update(req.body, {where:{id:req.params.id}})
+      .then((prod) =>{
+        if (req.body.quantity === 0){
+          transporter.sendMail(options)
+        }
+      })
       .then((prod) => {
         res.status(200).json({message:'Product Updated!'})
-      }).catch((err) => {
+      })
+      .catch((err) => {
         res.status(500).json({message:"Database Error"})
       })
     } catch (err) {

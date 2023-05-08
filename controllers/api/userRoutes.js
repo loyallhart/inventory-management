@@ -8,18 +8,20 @@ router.post('/login', async (req, res) => {
     if (req.session.logged_in){
       res.sendStatus(301)
     }else{
-      const userData = await Users.findOne({ where: { username: req.body.username } })
-      if (userData) {
-        userDataJson = userData.toJSON()
-        validPassword = (req.body.password === userDataJson.password) ? true : false
-      }
-      if (userData && validPassword) {
-        req.session.save(() => {
-          req.session.user_id = userDataJson.id
-          req.session.logged_in = true
-          res.status(200).json({ user: userDataJson, message: 'You are now logged in!' })
-        })
-      }else{    
+        const userData = await Users.findOne({ where: { username: req.body.username } })
+        if (userData) {
+         userDataJson = userData.toJSON()
+         validPassword = (userDataJson.password = req.body.password) ? true : false
+        }
+
+        if (userData && validPassword) {
+          req.session.save(() => {
+            req.session.user_id = userDataJson.id
+            req.session.logged_in = true
+            res.json({ user: userDataJson, message: 'You are now logged in!' })
+          })
+          return
+        }else{    
         res.status(400)
         .json({ message: 'Incorrect username or password, please try again' });
       }
