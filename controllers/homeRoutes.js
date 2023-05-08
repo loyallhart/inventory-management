@@ -24,16 +24,19 @@ router.get('/categories', async (req, res) => {
 });
 
 router.get('/dashboard', async (req, res) => {
-  res.status(200).render('dashboard')
+  res.status(200).render('dashboard',{style: 'dashboard.css'})
 })
 
 router.get('/inventory', async (req, res) => {
   res.status(200).render('inventory')
 })
 
-router.get('/login', async (req, res) => {
-  console.log('login')
-  res.status(200).render('login')
+router.get('/signup', async (req, res) => {
+  res.status(200).render('signup',{style: 'signup.css'})
+})
+
+router.get('/', async (req, res) => {
+  res.status(200).render('login',{style: 'login.css'})
 })
 
 module.exports = router
