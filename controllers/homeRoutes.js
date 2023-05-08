@@ -24,7 +24,7 @@ router.get('/categories', async (req, res) => {
 });
 
 router.get('/login', async (req, res) => {
-  res.status(200).render('login')
+  res.status(200).render('login');
 })
 
 module.exports = router
