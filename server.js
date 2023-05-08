@@ -38,14 +38,28 @@ app.use(express.static('public'));
 
 //test get routes
 app.get('/', (req, res) => {
-  res.render('login');
+  res.render('login', {
+    style: 'login.css'
+  });
 });
 
 app.get('/dashboard', (req, res) => {
-  res.render('dashboard');
+  res.render('dashboard', {
+    style: 'dashboard.css'
+  });
+});
+
+app.get('/signup', (req, res) => {
+  res.render('signup', {
+    style: 'signup.css'
+  });
 });
 
 //sync sequelize and start listening
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'))
 })
+
+
+
+
