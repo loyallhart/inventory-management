@@ -1,6 +1,4 @@
-// function loginUser() {
-//     var username = document.getElementById("username").value;
-//     var password = document.getElementById("password").value;
+// Login 
   
     const loginUser= async (event) => {
       event.preventDefault();
@@ -32,36 +30,39 @@
     .querySelector('.login-form')
     .addEventListener('submit', loginUser);
 
-    // if (username.trim() == "") {
-    //   alert("Please enter your username");
-    //   return;
-    // }
-    // if (password.trim() == "") {
-    //   alert("Please enter your password");
-    //   return;
-    // }
-    // fetch("/login", {
-    //   method: "POST",
-    //   body: JSON.stringify({ username: username, password: password }),
-    //   headers: { "Content-Type": "application/json" }
-    // })
-    // .then(function(response) {
-    //   return response.json();
-    // })
-    // .then(function(data) {
-    //   if (data.success) {
-    //     window.location.href = "/dashboard";
-    //   } else {
-    //     alert(data.message);
-    //   }
-    // })
+    // Sign up
+
+    const signup= async (event) => {
+      event.preventDefault();
     
+      const name = document.querySelector('#name-signup').value.trim();
+      const email = document.querySelector('#email-signup').value.trim();
+      const password = document.querySelector('#password-signup').value.trim();
+    
+      if (name && email && password) {
+        const response = await fetch('/api/users', {
+          method: 'POST',
+          body: JSON.stringify({ name, email, password }),
+          headers: { 'Content-Type': 'application/json' },
+        });
+    
+        if (response.ok) {
+          document.location.replace('/profile');
+        } else {
+          alert(response.statusText);
+        }
+      }
+    };
+    
+    document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signup);
   
 
  
-    setTimeout(() => {
-      document.querySelector('.notification').classList.add("hidden");
-      document.querySelector('.question').classList.remove("hidden");
-    })
+    // set(() => {
+    //   document.querySelector('.notification').classList.add("hidden");
+    //   document.querySelector('.question').classList.remove("hidden");
+    // })
 
   
