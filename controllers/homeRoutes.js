@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Product, Category } = require('../models');
 
-router.get('/products', async (req, res) => {
+router.get('/products', withAuth, async (req, res) => {
     try {
       let products = await Product.findAll()
       products = products.map(product => product.get({plain:true}))
@@ -23,7 +23,16 @@ router.get('/categories', async (req, res) => {
   }
 });
 
+router.get('/dashboard', async (req, res) => {
+  res.status(200).render('dashboard')
+})
+
+router.get('/inventory', async (req, res) => {
+  res.status(200).render('inventory')
+})
+
 router.get('/login', async (req, res) => {
+  console.log('login')
   res.status(200).render('login')
 })
 
