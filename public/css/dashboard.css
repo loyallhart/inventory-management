@@ -1,5 +1,5 @@
 body {
-  background-image: url(./images/backgroundp2.jpg);
+  background-image: url(../images/backgroundp2.jpg);
   background-size: cover;
 }
 
@@ -137,7 +137,7 @@ button.btn:hover {
 }
 /* PAGE 2 */
 
-.title2 {
+.title2{
   color: rgb(233, 241, 241);
   font-size: 7rem;
   text-align: center;
@@ -181,40 +181,8 @@ margin-left: 200px;
 }
 
 #dropdown{
-display: flex;
+display: none;
 }
-
-table{
-	width:  1000px;
-	margin: 30px auto;
-}
-
-table th{
-	padding: 10px 0;
-	background-color: #f4f4f4;
-	/* background-color: #fff; */
-	border:  thin solid #d4d4d4;
-}
-
-table td{
-	padding: 10px;
-	border:  thin solid #d4d4d4;
-	width: 18%;
-	text-align: center;
-	background-color: #fff;
-}
-
-table select{
-	padding: 10px;
-	width:  200px;
-	font-size: 16px;
-	border: thin solid #d4d4d4;
-	background-color: transparent;
-}
-table select:focus{
-	outline: none;
-}
-
 
 
 /* @medias */

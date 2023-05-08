@@ -44,7 +44,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/dashboard', (req, res) => {
-  res.render('dashboard');
+  res.render('dashboard', {
+    style: 'dashboard.css'
+  });
 });
 
 //sync sequelize and start listening
