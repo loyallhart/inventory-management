@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Product, Category } = require('../models');
 
-router.get('/products', withAuth, async (req, res) => {
+router.get('/products', async (req, res) => {
     try {
       let products = await Product.findAll()
       products = products.map(product => product.get({plain:true}))
