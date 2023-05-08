@@ -93,32 +93,4 @@
     <!-- populated from javascript -->
   </tbody>
 </section>
-<script>
-  function displayTable() {
-    fetch("/products")
-.then(function(response){
-   return response.json();
-})
-.then(function(products){
-   let placeholder = document.querySelector("#data-output");
-   let  out ="";
-   for(let product of products){
-      out += `
-         <tr>
-            <td> <img src='${product.name}'> </td>
-            <td>${product.model}</td>
-            <td>${product.manufacturer}</td>
-            <td>${product.purchaseDate}</td>
-            <td>${product.quanity}</td>
-            <td>${product.status}</td>
-            <td>${product.owner}</td>
-         </tr>
-      `;
-   }
- 
-   placeholder.innerHTML = out;
-});
-
-}
-
-</script>
+ <script src="./products.js"></script>
