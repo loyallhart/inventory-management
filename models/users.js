@@ -43,10 +43,13 @@ Users.init(
       {
         hooks: {
           beforeCreate: async (newUserData) => {
+            console.log('Before create hook triggered');
             await newUserData.setPassword(newUserData.password);
           },
           beforeUpdate: async (updatedUserData) => {
+            if (updatedUserData.password){
               await updatedUserData.setPassword(updatedUserData.password);
+            }
           },
         },
         sequelize,
