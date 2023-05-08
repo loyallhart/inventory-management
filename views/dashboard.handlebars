@@ -25,8 +25,11 @@
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="./images/box.png" alt="products icon" width="50" height="50" class="d-inline-block align-text-top">
-        <p id="total-products">Products</p>
+        <img src="./images/box.png" alt="products icon" width="50" height="50" class="d-inline-block align-text-top" style="padding-bottom: 10px;">
+        <br>
+        <button class="btn" onclick="">Products</button>
+        <p id="total-products"></p>
+
 
       </a>
     </div>
@@ -34,35 +37,59 @@
   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="./images/deployed.png" alt="internal products icon" width="50" height="50" class="d-inline-block align-text-top">
-        <p id="internal-products">Internal Products</p>
+        <img src="./images/deployed.png" alt="internal products icon" width="50" height="50" class="d-inline-block align-text-top"  style="padding-bottom: 10px;">
+        <br>
+        <button class="btn" onclick="">Internal Products</button>
+        <p id="internal-products"></p>
       </a>
     </div>
   </nav>
   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="./images/low.png" alt="low stock icon" width="50" height="50" class="d-inline-block align-text-top">
-        <p id="low-stock-products">Low Stock </p>
+        <img src="./images/low.png" alt="low stock icon" width="50" height="50" class="d-inline-block align-text-top" style="padding-bottom: 10px;">
+        <br>
+        <button class="btn" onclick="">Low Stock</button>
+        <p id="low-stock-products"></p>
       </a>
     </div>
   </nav>
   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="./images/out-of-stock.png" alt="out of stock icon" width="50" height="50" class="d-inline-block align-text-top">
-        <p id="out-of-stock-products">Out of Stock</p>
+        <img src="./images/out-of-stock.png" alt="out of stock icon" width="50" height="50" class="d-inline-block align-text-top"  style="padding-bottom: 10px;">
+        <br>
+        <button class="btn" onclick="">Out of Stock</button>
+        <p id="out-of-stock-products"></p>
       </a>
     </div>
   </nav>
   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="./images/damaged-package.png" alt="damaged inventory icon" width="50" height="50" class="d-inline-block align-text-top">
-        <p id="damaged-inventory">Damaged Inventory</p>
+        <img src="./images/damaged-package.png" alt="damaged inventory icon" width="50" height="50" class="d-inline-block align-text-top"  style="padding-bottom: 10px;">
+        <br>
+        <button class="btn" onclick="">Damaged Inventory</button>
+        <p id="damaged-inventory"></p>
       </a>
     </div>
   </nav>
 </div>
 <!-- section to link backend for table to show,  so when you click in each product backend will bring information -->
-<section class="table-information" id="dropdown"> </section>
+<section class="table-information" id="dropdown">
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Manufactuer</th>
+      <th>Purchase Date</th>
+      <th>Quanity</th>
+      <th>Status</th>
+      <th>Owner</th>
+    </tr>
+  </thead>
+  <tbody id="data-output">
+    <!-- populated from javascript -->
+  </tbody>
+</section>

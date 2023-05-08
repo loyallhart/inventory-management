@@ -3,7 +3,7 @@ body {
   background-size: cover;
 }
 
-/* login page */
+* login page */
 
 .hidden {
   display: none
@@ -113,7 +113,7 @@ button.btn {
   background-color: #007bff;
   color: #fff;
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -137,9 +137,9 @@ button.btn:hover {
 }
 /* PAGE 2 */
 
-.title2{
+.title2 {
   color: rgb(233, 241, 241);
-  font-size: 7rem;
+  font-size: 42px;
   text-align: center;
 }
 
@@ -181,8 +181,41 @@ margin-left: 200px;
 }
 
 #dropdown{
-display: none;
+display: flex;
 }
+
+table{
+	width:  1000px;
+	margin: 30px auto;
+}
+
+table th{
+	padding: 10px 0;
+	background-color: #f4f4f4;
+	/* background-color: #fff; */
+	border:  thin solid #d4d4d4;
+  font-size: 12px;
+}
+
+table td{
+	padding: 10px;
+	border:  thin solid #d4d4d4;
+	width: 18%;
+	text-align: center;
+	background-color: #fff;
+}
+
+table select{
+	padding: 10px;
+	width:  200px;
+	font-size: 10px;
+	border: thin solid #d4d4d4;
+	background-color: transparent;
+}
+table select:focus{
+	outline: none;
+}
+
 
 
 /* @medias */
@@ -197,7 +230,7 @@ display: none;
 
 .title2 {
   color: rgb(244, 247, 247);
-  font-size: 7rem;
+  font-size: 42px;
   text-align: center;
 }
 
