@@ -149,6 +149,12 @@ button.btn:hover {
   display:inline-block;
   
 }
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 
 p{
   font-size: 2rem;
