@@ -156,6 +156,11 @@ button.btn:hover {
   height: 80vh;
 }
 
+.carousel-item img {
+  margin: auto;
+}
+
+
 p{
   font-size: 2rem;
   color: aliceblue;
