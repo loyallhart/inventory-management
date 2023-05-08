@@ -1,8 +1,10 @@
 body {
+  background-image: url(./images/backgroundp2.jpg);
   background-size: cover;
-  margin-right: 5%;
-  margin-bottom: 5%;
-  margin-top: 5%;
+}
+
+.hidden {
+  display: none
 }
 .text {
   position: absolute;
@@ -57,31 +59,18 @@ button.btn {
   overflow: hidden;
 }
 
-body {
-  background-image: url(./images/backgroundp2.jpg);
-  background-size: cover;
-}
 
-p{
-  font-size: 2rem;
-  color: aliceblue;
-}
-.title2{
-  color: rgb(244, 247, 247);
-  font-size: 7rem;
-  text-align: center;
-}
-
-
-.products-container{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
 .product {
   flex: 1 0 20%;
   margin: 10px;
+}
+/* PAGE 2 */
+
+.title2{
+  color: rgb(233, 241, 241);
+  font-size: 7rem;
+  text-align: center;
 }
 
 /* carousel */
@@ -89,6 +78,28 @@ p{
   text-align: center;
   display:inline-block;
   
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.carousel-item img {
+  margin: auto;
+}
+
+
+p{
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.products-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /* dropdown for table information */
