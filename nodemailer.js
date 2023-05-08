@@ -8,11 +8,10 @@ const transporter = nodemailer.createTransport({
     }
 })
 
-const options ={
+let options ={
     from:"invmanagement@outlook.com",
     to:"matt.watkins@police.gatech.edu",
-    subject: "test notification",
-    text:"test text message"
+    subject:"Item out of stock"
 }
 
 module.exports = {transporter, options}
