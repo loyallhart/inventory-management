@@ -1,16 +1,35 @@
 const router = require('express').Router();
 const { Product, Category, Users } = require('../../models');
-
+const {transporter, options} = require('../../nodemailer')
 router.put('/product/:id', async (req, res) => {
     try {
+      let product
       if (!req.session.logged_in) {
         res.sendStatus(401) 
         return
       }
+
       Product.update(req.body, {where:{id:req.params.id}})
+      .then(async (prod) =>{
+        if (req.body.quantity === 0){
+          product = await Product.findOne({
+            where:{id:req.params.id},
+            raw:true
+          })
+          console.log(product)
+          let users = await Users.findAll({raw:true})
+          let emailList = users.map(user => user.email)
+          console.log(emailList)
+          options.to = emailList.join(',')
+          console.log(emailList)
+          options.text = `${product.name} is out of stock`
+          transporter.sendMail(options)
+        }
+      })
       .then((prod) => {
         res.status(200).json({message:'Product Updated!'})
-      }).catch((err) => {
+      })
+      .catch((err) => {
         res.status(500).json({message:"Database Error"})
       })
     } catch (err) {

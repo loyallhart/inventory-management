@@ -36,15 +36,6 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 
-//test get routes
-app.get('/', (req, res) => {
-  res.render('login');
-});
-
-app.get('/dashboard', (req, res) => {
-  res.render('dashboard');
-});
-
 //sync sequelize and start listening
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'))

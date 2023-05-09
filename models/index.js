@@ -14,4 +14,4 @@ Product.belongsToMany(Category, {
     foreignKey: 'product_id'
   });
   
-  module.exports = { Product, Users, Category, ProductCategory };
+  module.exports = { Product, Users, Category, ProductCategory, sequelize };

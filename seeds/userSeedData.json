@@ -1,14 +1,17 @@
 [
     {
-        "email": "john_doe",
+        "username":"john_doe",
+        "email": "matt.watkins@police.gatech.edu",
         "password": "password123"
     },
     {
-        "email": "jane_smith",
+        "username":"jane_smith",
+        "email": "jane.smith@nowher.com",
         "password": "secret456"
     },
     {
-        "email": "bob_smith",
+        "username":"bob_smith",
+        "email": "bob.smith@nowher.com",
         "password": "pass123"
     }
 ]
