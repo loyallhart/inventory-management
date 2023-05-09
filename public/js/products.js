@@ -42,12 +42,12 @@ fetch("/products")
    let placeholder = document.querySelector("#data-output");
    let out = "";
    for(let product of products){
-      out +=
+      out += 
       ` <tr>
             <td>${product.name}</td>
             <td>${product.model}</td>
             <td>${product.manufacturer}</td>
-            <td>${product.purchaseDate}</td>
+            <td>${product.formatted_date}</td>
             <td>${product.quantity}</td>
             <td>${product.status}</td>
             <td>${product.owner}</td>
