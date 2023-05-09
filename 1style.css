@@ -1,0 +1,69 @@
+/* login page */
+
+  .padlock{
+    border-radius: 90%;
+    margin-top: -10%;
+    margin-left: 10%;
+    width: 11%;
+    height: auto;
+  }
+ 
+
+.form-signin{
+    padding: 40px;
+    color: white;
+    font-style: bold;
+    font-size: 10px;
+    margin-left: -15%;
+} 
+
+/* Sign up page 3*/
+.signup{
+height: 50px;
+text-align: center;
+color: white;
+position: center;
+text-decoration: bold;
+margin-right: -80%; 
+}
+
+button.btn {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2%;
+  }
+  
+  button.btn:hover {
+    background-color: #b2c932;
+  }
+
+body {
+    background-image: url("./images/login.jpg");
+    background-size: 100%;
+} 
+
+.containers {
+background-size: 100%;
+/* margin-left: 30%; */
+/* margin-right: 40%; */
+margin-top: 20%;
+margin-bottom: 50%;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+}
+
+footer {
+    background-color: white;
+    position: fixed;
+    color: yellow;
+    /* width: 100%; */
+    /* height: 60px; */
+  }
