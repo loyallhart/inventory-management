@@ -3,21 +3,22 @@
 const loginUser= async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#username-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
+    const username = document.querySelector('#inputUsername').value.trim();
+    const password = document.querySelector('#inputPassword').value.trim();
 
     if (username && password) {
 
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('/api/user/login', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/dashboard');
       } else {
-        alert(response.statusText);
+        errorData = await response.json()
+        alert(errorData.message);
       }
     }
     setTimeout(() => {
@@ -27,14 +28,15 @@ const loginUser= async (event) => {
   };
 
   document
-  .querySelector('.login-form')
+  .querySelector('.form-signin')
   .addEventListener('submit', loginUser);
 
   // Sign up
 
   const signup= async (event) => {
     event.preventDefault();
-  
+    console.log(event)
+    document.location.replace('/signup');
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
@@ -47,7 +49,7 @@ const loginUser= async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/signup');
       } else {
         alert(response.statusText);
       }
@@ -55,8 +57,8 @@ const loginUser= async (event) => {
   };
   
   document
-  .querySelector('.signup-form')
-  .addEventListener('submit', signup);
+  .querySelector('.signupbtn')
+  .addEventListener('click', signup);
 
 
 

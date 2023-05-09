@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
         return
       }
 
-      const stockOut = await Product.findAll({
+      let inStock = await Product.findAll({
         attributes:[
           'id',
           'name',
@@ -21,13 +21,13 @@ router.get('/', async (req, res) => {
           'status',
           [Sequelize.fn('DATE_FORMAT', Sequelize.col('purchase_date'), '%m-%d-%Y'), 'formatted_date']
         ],
-        where:{quantity:0},
         order: [['name','asc']],
+        where:{quantity:{[Op.gt]:9}},
         raw:true
       })
 
-      if (stockOut){
-        res.status(200).json({stockOut})
+      if (inStock){
+        res.status(200).json({inStock})
       }else{
         res.status(500)
         .json({ message: 'Database Error' })

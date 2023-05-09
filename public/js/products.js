@@ -35,25 +35,122 @@
 //   const div = document.getElementById("dropdown");
 //   div.style.display = "block";
   
-fetch("/products")
-.then((response) => response.json())
-.then((data) =>{
-  const products = data.products
-   let placeholder = document.querySelector("#data-output");
-   let out = "";
-   for(let product of products){
-      out += 
-      ` <tr>
-            <td>${product.name}</td>
-            <td>${product.model}</td>
-            <td>${product.manufacturer}</td>
-            <td>${product.formatted_date}</td>
-            <td>${product.quantity}</td>
-            <td>${product.status}</td>
-            <td>${product.owner}</td>
-         </tr>
-      `;
-   }
-  console.log(out)
-   placeholder.innerHTML = out;
-});
+function fetchProducts(){
+   fetch("/products")
+   .then((response) => response.json())
+   .then((data) =>{
+   const products = data.products
+      let placeholder = document.querySelector("#data-output");
+      let out = "";
+      for(let product of products){
+         out += 
+         ` <tr>
+               <td>${product.name}</td>
+               <td>${product.model}</td>
+               <td>${product.manufacturer}</td>
+               <td>${product.formatted_date}</td>
+               <td>${product.quantity}</td>
+               <td>${product.status}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
+            </tr>
+         `;
+      }
+      placeholder.innerHTML = out;
+   });
+}
+
+function fetchInStock(){
+   fetch("/reports/instock")
+   .then((response) => response.json())
+   .then((data) =>{
+   const products = data.inStock
+      let placeholder = document.querySelector("#data-output");
+      let out = "";
+      for(let product of products){
+         out += 
+         ` <tr>
+               <td>${product.name}</td>
+               <td>${product.model}</td>
+               <td>${product.manufacturer}</td>
+               <td>${product.formatted_date}</td>
+               <td>${product.quantity}</td>
+               <td>${product.status}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
+            </tr>
+         `;
+      }
+      placeholder.innerHTML = out;
+   });
+}
+
+function fetchLowStock(){
+   fetch("/reports/lowStock")
+   .then((response) => response.json())
+   .then((data) =>{
+   const products = data.lowStock
+      let placeholder = document.querySelector("#data-output");
+      let out = "";
+      for(let product of products){
+         out += 
+         ` <tr>
+               <td>${product.name}</td>
+               <td>${product.model}</td>
+               <td>${product.manufacturer}</td>
+               <td>${product.formatted_date}</td>
+               <td>${product.quantity}</td>
+               <td>${product.status}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
+            </tr>
+         `;
+      }
+      placeholder.innerHTML = out;
+   });
+}
+
+function fetchStockOut(){
+   fetch("/reports/stockOut")
+   .then((response) => response.json())
+   .then((data) =>{
+   const products = data.stockOut
+      let placeholder = document.querySelector("#data-output");
+      let out = "";
+      for(let product of products){
+         out += 
+         ` <tr>
+               <td>${product.name}</td>
+               <td>${product.model}</td>
+               <td>${product.manufacturer}</td>
+               <td>${product.formatted_date}</td>
+               <td>${product.quantity}</td>
+               <td>${product.status}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
+            </tr>
+         `;
+      }
+      placeholder.innerHTML = out;
+   });
+}
+
+function fetchDamaged(){
+   fetch("/reports/damaged")
+   .then((response) => response.json())
+   .then((data) =>{
+   const products = data.damaged
+      let placeholder = document.querySelector("#data-output");
+      let out = "";
+      for(let product of products){
+         out += 
+         ` <tr>
+               <td>${product.name}</td>
+               <td>${product.model}</td>
+               <td>${product.manufacturer}</td>
+               <td>${product.formatted_date}</td>
+               <td>${product.quantity}</td>
+               <td>${product.status}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
+            </tr>
+         `;
+      }
+      placeholder.innerHTML = out;
+   });
+}

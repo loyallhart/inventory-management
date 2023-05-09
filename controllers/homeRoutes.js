@@ -15,7 +15,7 @@ router.get('/products', async (req, res) => {
         'status',
         [Sequelize.fn('DATE_FORMAT', Sequelize.col('purchase_date'), '%m-%d-%Y'), 'formatted_date']
       ],
-      order: [['name','DESC']],
+      order: [['name','asc']],
       raw:true
     })
       // products = products.map(product => product.get({plain:true}))

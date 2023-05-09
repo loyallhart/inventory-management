@@ -16,12 +16,10 @@ router.put('/product/:id', async (req, res) => {
             where:{id:req.params.id},
             raw:true
           })
-          console.log(product)
+
           let users = await Users.findAll({raw:true})
           let emailList = users.map(user => user.email)
-          console.log(emailList)
           options.to = emailList.join(',')
-          console.log(emailList)
           options.text = `${product.name} is out of stock`
           transporter.sendMail(options)
         }

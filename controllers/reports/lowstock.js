@@ -10,7 +10,18 @@ router.get('/', async (req, res) => {
         return
       }
 
-      const lowStock = await Product.count({
+      let lowStock = await Product.findAll({
+        attributes:[
+          'id',
+          'name',
+          'model',
+          'manufacturer',
+          'purchase_date',
+          'quantity',
+          'status',
+          [Sequelize.fn('DATE_FORMAT', Sequelize.col('purchase_date'), '%m-%d-%Y'), 'formatted_date']
+        ],
+        order: [['name','asc']],
         where:{
           [Op.or]:{
             [Op.and]:[
@@ -18,11 +29,12 @@ router.get('/', async (req, res) => {
               {quantity:{[Op.gt]:0}}
             ]
           }
-        }
+        },
+        raw:true
       })
 
       if (lowStock){
-        res.status(200).json({count:lowStock})
+        res.status(200).json({lowStock})
       }else{
         res.status(500)
         .json({ message: 'Database Error' })

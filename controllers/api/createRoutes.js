@@ -46,13 +46,15 @@ router.post('/category', async (req, res) => {
 router.post('/user', async (req, res) => {
   try {
     const data = req.body
+
     let currentUsers = await Users.findAll({
       attributes:['username'],
       raw: true
     })
+
     currentUsers = currentUsers.map(user => user.username)
-    console.log(currentUsers)
-    if (currentUsers.includes(req.body.username)){
+
+    if (currentUsers.includes(data.username)){
       res.status(301).json({message: "Username Already Exists"})
       return
     }
