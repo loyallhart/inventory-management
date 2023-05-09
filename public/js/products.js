@@ -59,6 +59,30 @@ function fetchProducts(){
    });
 }
 
+function fetchInStock(){
+   fetch("/reports/instock")
+   .then((response) => response.json())
+   .then((data) =>{
+   const products = data.inStock
+      let placeholder = document.querySelector("#data-output");
+      let out = "";
+      for(let product of products){
+         out += 
+         ` <tr>
+               <td>${product.name}</td>
+               <td>${product.model}</td>
+               <td>${product.manufacturer}</td>
+               <td>${product.formatted_date}</td>
+               <td>${product.quantity}</td>
+               <td>${product.status}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
+            </tr>
+         `;
+      }
+      placeholder.innerHTML = out;
+   });
+}
+
 function fetchLowStock(){
    fetch("/reports/lowStock")
    .then((response) => response.json())
