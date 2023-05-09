@@ -8,13 +8,13 @@ router.post('/login', async (req, res) => {
     if (req.session.logged_in){
       res.sendStatus(301)
     }else{
-        const userData = await Users.findOne({ where: { username: req.body.username } })
+      const userData = await Users.findOne({ where: { username: req.body.username } })
 
-        if (userData) {
-          userDataJson = userData.toJSON()
-          validPassword = await userData.checkPassword(req.body.password)
-        }
-
+      if (userData) {
+        userDataJson = userData.toJSON()
+        validPassword = await userData.checkPassword(req.body.password)
+      }
+      
         if (userData && validPassword) {
           req.session.save(() => {
             req.session.user_id = userDataJson.id
