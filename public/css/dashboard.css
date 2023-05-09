@@ -174,10 +174,10 @@ p{
 
 /* dropdown for table information */
 .table-information{
-background-color: aqua;
-width: 150vh;
-height: 300px;
-margin-left: 200px;
+background-color: rgba(228, 235, 235, 0.407);
+width: 100vh;
+height: 1050px;
+margin-left: 150px;
 }
 
 #dropdown{
@@ -207,10 +207,10 @@ table td{
 }
 
 table select{
-	padding: 10px;
+	padding: 20px;
 	width:  200px;
 	font-size: 10px;
-	border: thin solid #d4d4d4;
+	border: thin solid #d4d4d475;
 	background-color: transparent;
 }
 table select:focus{
