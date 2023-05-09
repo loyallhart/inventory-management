@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Product A",
+    "model": "A-100",
+    "manufacturer": "Manufacturer X",
+    "purchaseDate": "2022-01-01",
+    "quantity": 10,
+    "status": "in stock",
+    "owner": null,
+    "categoryId": 1
+  },
+  {
+    "name": "Product B",
+    "model": "B-200",
+    "manufacturer": "Manufacturer Y",
+    "purchaseDate": "2022-02-01",
+    "quantity": 5,
+    "status": "damaged",
+    "owner": null,
+    "categoryId": 2
+  },
+  {
+    "name": "Product C",
+    "model": "C-300",
+    "manufacturer": "Manufacturer Z",
+    "purchaseDate": "2022-03-01",
+    "quantity": 0,
+    "status": "out of stock",
+    "owner": null,
+    "categoryId": 3
+  },
+{
+    "name": "Product D",
+    "model": "D-300",
+    "manufacturer": "Dell",
+    "purchaseDate": "2022-03-01",
+    "quantity": 23,
+    "status": "in stock",
+    "owner": "bob",
+    "categoryId": 3
+  },
+{
+    "name": "Product E",
+    "model": "Scanner 93",
+    "manufacturer": "Apple",
+    "purchaseDate": "2023-04-01",
+    "quantity": 9,
+    "status": "in stock",
+    "owner": "jess",
+    "categoryId": 4
+  },
+{
+    "name": "Beer",
+    "model": "Coder Draft",
+    "manufacturer": "Startup Brewery",
+    "purchaseDate": "2023-04-01",
+    "quantity": 0,
+    "status": "out of stock",
+    "owner": "Betty Sue",
+    "categoryId": 1
+  },
+{
+    "name": "Bicycle",
+    "model": "Gogetter 7000",
+    "manufacturer": "Specialized",
+    "purchaseDate": "2023-05-09",
+    "quantity": 15,
+    "status": "in stock",
+    "owner": null,
+    "categoryId": 3
+  },
+{
+    "name": "Skateboard",
+    "model": "KickerX",
+    "manufacturer": "BoardsRUs",
+    "purchaseDate": "2022-03-01",
+    "quantity": 8,
+    "status": "damaged",
+    "owner": null,
+    "categoryId": 2
+  },
+{
+    "name": "Hand Mixer",
+    "model": "ManMixY",
+    "manufacturer": "Crocker",
+    "purchaseDate": "2022-08-06",
+    "quantity": 8,
+    "status": "damaged",
+    "owner": null,
+    "categoryId": 1
+  },
+{
+    "name": "Refridgerator",
+    "model": "MostCooler",
+    "manufacturer": "Dewey Inc",
+    "purchaseDate": "2023-01-01",
+    "quantity": 12,
+    "status": "in stock",
+    "owner": "Billy Bob",
+    "categoryId": 1
+  },
+{
+    "name": "Wood",
+    "model": "Pine",
+    "manufacturer": "MotherEarth",
+    "purchaseDate": "2022-03-01",
+    "quantity": 150,
+    "status": "in stock",
+    "owner": null,
+    "categoryId": 4
+  },
+{
+    "name": "Bricks",
+    "model": "Hardened",
+    "manufacturer": "Masonite",
+    "purchaseDate": "2022-07-07",
+    "quantity": 153,
+    "status": "in stock",
+    "owner": null,
+    "categoryId": 3
+  },
+{
+    "name": "Sod",
+    "model": "Bermuda",
+    "manufacturer": "GrassKing",
+    "purchaseDate": "2022-03-01",
+    "quantity": 6,
+    "status": "in stock",
+    "owner": null,
+    "categoryId": 3
+  },
+{
+    "name": "Leash",
+    "model": "DogSnactherK9",
+    "manufacturer": "DogHandler",
+    "purchaseDate": "2022-09-09",
+    "quantity": 0,
+    "status": "out of stock",
+    "owner": null,
+    "categoryId": 3
+  },
+{
+    "name": "Coffee Cup",
+    "model": "Fancy",
+    "manufacturer": "Bad Mugs",
+    "purchaseDate": "2022-03-01",
+    "quantity": 6,
+    "status": "damaged",
+    "owner": null,
+    "categoryId": 3
+  }
+]

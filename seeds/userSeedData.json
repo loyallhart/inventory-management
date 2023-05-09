@@ -1,0 +1,17 @@
+[
+    {
+        "username":"john_doe",
+        "email": "deweywatkins77@gmail.com",
+        "password": "password123"
+    },
+    {
+        "username":"jane_smith",
+        "email": "jane.smith@nowher.com",
+        "password": "secret456"
+    },
+    {
+        "username":"bob_smith",
+        "email": "bob.smith@nowher.com",
+        "password": "pass123"
+    }
+]

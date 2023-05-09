@@ -1,0 +1,84 @@
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 30%;
+  text-shadow: 1px 1px 0 red , -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red;
+
+  color: white;
+}
+
+.form-class {
+  margin-bottom: 20px;
+}
+
+.signup {
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 50%;
+  text-shadow: 1px 1px 0 black , -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.form-check-label {
+  color: yellow;
+  font-size: 1.2rem;
+}
+.form-check {
+  margin-left: 38%;
+  size: 1.3rem;
+}
+
+button.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: red;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 black;
+}
+
+button.btn:hover {
+  background-color: #b2c932;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  font-size: 1.5rem;
+}
+
+#email{
+    width: 100%;
+}
+button.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+body {
+  background-image: url(./images/backgroundp2.jpg);
+  background-size: cover;
+}
