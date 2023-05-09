@@ -46,7 +46,6 @@ button.btn {
   border-radius: 5px;
   font-size: 1.2rem;
   cursor: pointer;
-  /* transition: all 0.3s; */
   text-shadow: 1px 1px 0 black;
 }
 
@@ -60,7 +59,6 @@ input[type="password"] {
   height: 100%;
   padding: 10px;
   border: 2px solid #ccc;
-  /* border-radius: 5px; */
   font-size: 1.5rem;
 }
 
