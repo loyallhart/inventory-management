@@ -181,7 +181,7 @@ margin-left: 200px;
 }
 
 #dropdown{
-display: block;
+display: flex;
 }
 
 table{

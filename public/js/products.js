@@ -41,11 +41,14 @@ fetch("/products")
 })
 .then(function(products){
    let placeholder = document.querySelector("#data-output");
-   let out = "";
+   // let out = "";
    console.log(products)
-   for(let product of products){
-      out += 
-      console.log(product[0])
+   for (var i=0; i < products.length; i++) {
+      console.log(products[0])
+   };
+   // for(let product of products){
+   //    out += 
+   //    console.log(product[0])
       // `
       //    <tr>
       //       <td>${product.name}</td>
@@ -57,7 +60,7 @@ fetch("/products")
       //       <td>${product.owner}</td>
       //    </tr>
       // `;
-   }
+   // }
   console.log(out)
    placeholder.innerHTML = out;
 });
