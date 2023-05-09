@@ -9,9 +9,10 @@ router.post('/login', async (req, res) => {
       res.sendStatus(301)
     }else{
         const userData = await Users.findOne({ where: { username: req.body.username } })
+
         if (userData) {
-         userDataJson = userData.toJSON()
-         validPassword = (userDataJson.password = req.body.password) ? true : false
+          userDataJson = userData.toJSON()
+          validPassword = await userData.checkPassword(req.body.password)
         }
 
         if (userData && validPassword) {
