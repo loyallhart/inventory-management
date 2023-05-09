@@ -36,31 +36,24 @@
 //   div.style.display = "block";
   
 fetch("/products")
-.then(function(response){
-   return response.json();
-})
-.then(function(products){
+.then((response) => response.json())
+.then((data) =>{
+  const products = data.products
    let placeholder = document.querySelector("#data-output");
-   // let out = "";
-   console.log(products)
-   for (var i=0; i < products.length; i++) {
-      console.log(products[0])
-   };
-   // for(let product of products){
-   //    out += 
-   //    console.log(product[0])
-      // `
-      //    <tr>
-      //       <td>${product.name}</td>
-      //       <td>${product.model}</td>
-      //       <td>${product.manufacturer}</td>
-      //       <td>${product.purchaseDate}</td>
-      //       <td>${product.quantity}</td>
-      //       <td>${product.status}</td>
-      //       <td>${product.owner}</td>
-      //    </tr>
-      // `;
-   // }
+   let out = "";
+   for(let product of products){
+      out += 
+      ` <tr>
+            <td>${product.name}</td>
+            <td>${product.model}</td>
+            <td>${product.manufacturer}</td>
+            <td>${product.formatted_date}</td>
+            <td>${product.quantity}</td>
+            <td>${product.status}</td>
+            <td>${product.owner}</td>
+         </tr>
+      `;
+   }
   console.log(out)
    placeholder.innerHTML = out;
 });
