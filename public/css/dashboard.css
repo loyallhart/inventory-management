@@ -195,6 +195,7 @@ table th{
 	/* background-color: #fff; */
 	border:  thin solid #d4d4d4;
   font-size: 12px;
+  text-align:center;
 }
 
 table td{
