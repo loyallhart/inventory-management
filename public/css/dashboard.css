@@ -174,14 +174,14 @@ p{
 
 /* dropdown for table information */
 .table-information{
-background-color: aqua;
+background-color: rgba(228, 235, 235, 0.473);
 width: 150vh;
 height: 300px;
 margin-left: 200px;
 }
 
 #dropdown{
-display: block;
+display: flex;
 }
 
 table{
