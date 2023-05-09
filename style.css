@@ -111,7 +111,7 @@ margin-left: 200px;
 }
 
 #dropdown{
-display: none;
+display: flex;
 }
 
 /* @medias */
