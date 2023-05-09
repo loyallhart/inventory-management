@@ -51,7 +51,7 @@ function fetchProducts(){
                <td>${product.formatted_date}</td>
                <td>${product.quantity}</td>
                <td>${product.status}</td>
-               <td>${product.owner}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
             </tr>
          `;
       }
@@ -75,7 +75,7 @@ function fetchLowStock(){
                <td>${product.formatted_date}</td>
                <td>${product.quantity}</td>
                <td>${product.status}</td>
-               <td>${product.owner}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
             </tr>
          `;
       }
@@ -99,7 +99,7 @@ function fetchStockOut(){
                <td>${product.formatted_date}</td>
                <td>${product.quantity}</td>
                <td>${product.status}</td>
-               <td>${product.owner}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
             </tr>
          `;
       }
@@ -123,7 +123,7 @@ function fetchDamaged(){
                <td>${product.formatted_date}</td>
                <td>${product.quantity}</td>
                <td>${product.status}</td>
-               <td>${product.owner}</td>
+               <td>${(product.owner) ? product.owner : "Not Assigned"}</td>
             </tr>
          `;
       }

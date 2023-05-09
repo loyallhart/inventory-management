@@ -11,6 +11,17 @@ router.get('/', async (req, res) => {
       }
 
       let lowStock = await Product.findAll({
+        attributes:[
+          'id',
+          'name',
+          'model',
+          'manufacturer',
+          'purchase_date',
+          'quantity',
+          'status',
+          [Sequelize.fn('DATE_FORMAT', Sequelize.col('purchase_date'), '%m-%d-%Y'), 'formatted_date']
+        ],
+        order: [['name','asc']],
         where:{
           [Op.or]:{
             [Op.and]:[
