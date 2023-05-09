@@ -9,7 +9,7 @@ router.put('/product/:id', async (req, res) => {
         return
       }
 
-      Product.update(req.body, {where:{id:req.params.id}})
+      await Product.update(req.body, {where:{id:req.params.id}})
       .then(async (prod) =>{
         if (req.body.quantity === 0){
           product = await Product.findOne({
