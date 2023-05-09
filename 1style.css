@@ -2,7 +2,10 @@
 
   .padlock{
     border-radius: 90%;
-    margin-bottom: -20%;
+    margin-top: -10%;
+    margin-left: 10%;
+    width: 11%;
+    height: auto;
   }
  
 
@@ -11,19 +14,17 @@
     color: white;
     font-style: bold;
     font-size: 10px;
+    margin-left: -15%;
 } 
 
 /* Sign up page 3*/
 .signup{
-/* width: 10px; */
-/* height: 10px; */
+height: 50px;
 text-align: center;
 color: white;
 position: center;
-
+text-decoration: bold;
 margin-right: -80%; 
-/* margin-left: 100%; */
-/* filter:contrast(90%) */
 }
 
 button.btn {
@@ -34,6 +35,7 @@ button.btn {
     border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
+    margin-top: 2%;
   }
   
   button.btn:hover {
@@ -47,30 +49,21 @@ body {
 
 .containers {
 background-size: 100%;
-margin-left: 30%;
-margin-right: 40%;
+/* margin-left: 30%; */
+/* margin-right: 40%; */
+margin-top: 20%;
+margin-bottom: 50%;
 }
-
-
-/* .img-fluid{
-  width: 800px !important;
-  height: 500px !important;
-} */
-
-
-
-/* h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-} */
-
-/* .form-class {
-  margin-bottom: 20px;
-} */
 
 label {
   display: block;
   font-size: 1rem;
 }
 
+footer {
+    background-color: white;
+    position: fixed;
+    color: yellow;
+    /* width: 100%; */
+    /* height: 60px; */
+  }

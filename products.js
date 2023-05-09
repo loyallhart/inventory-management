@@ -1,5 +1,5 @@
 // Retrieve inventory data from backend API
-axios.get('/api/inventory')
+fetch('/products')
   .then(response => {
     // Parse inventory data and count products under different categories
     let totalProducts = 0;
@@ -10,18 +10,16 @@ axios.get('/api/inventory')
 
     response.data.forEach(product => {
       totalProducts++;
-      if (product.stock < 10) {
+      if (product.quantity < 10) {
         lowStockProducts++;
       }
-      if (product.stock === 0) {
+      if (product.quantity === 0) {
         outOfStockProducts++;
       }
       if (product.status === 'damaged') {
         damagedInventory++;
       }
-      if (product.location === 'internal') {
-        internalProducts++;
-      }
+    
     });
 
     // Display inventory status on dashboard
@@ -29,7 +27,6 @@ axios.get('/api/inventory')
     document.getElementById('low-stock-products').textContent = lowStockProducts;
     document.getElementById('out-of-stock-products').textContent = outOfStockProducts;
     document.getElementById('damaged-inventory').textContent = damagedInventory;
-    document.getElementById('internal-products').textContent = internalProducts;
     // 
   
   })
