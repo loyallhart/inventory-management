@@ -10,14 +10,15 @@ The objective behind building this application was to provide an easy to use too
 - [License](#license)
 
 ## Installation
-This is a browser based application.....
-. To run the application open it in your browser.
+This is a browser based application. To run the application clone the repository and download the needed packages "npm i". Next, run mysql in /db Source directory to the schema.sql file for the database to be created. Then for the seeds "npm run seed"  for the tables from the main directory. Final step run "npm start" and local link will be provded to access the page in the browser. 
 
 ## Deployment Link
 
 
 ## Usage
-screenshots
+This application organizes your company’s IT assets into easy categories for you to manage efficiently. View, update and create new inventory management pieces that are relevant to the company.
+
+Screenshots:
 
 
 ## Credits
