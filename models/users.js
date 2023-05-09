@@ -6,7 +6,8 @@ class Users extends Model {
     async setPassword(password) {
         const rounds = 10;
         const hashedPassword = await bcrypt.hash(password, rounds);
-        this.password = hashedPassword;
+        // this.password = hashedPassword;
+        return hashedPassword
       }
     
       // compare entered password with hashed password in database
@@ -48,12 +49,14 @@ Users.init(
         hooks: {
           beforeCreate: async (newUserData) => {
             console.log('Before create hook triggered');
-            await newUserData.setPassword(newUserData.password);
+            // newUserData.setPassword(newUserData.password);
+            newUserData.password = await newUserData.setPassword(newUserData.password);
+            return newUserData
           },
           beforeUpdate: async (updatedUserData) => {
-            if (updatedUserData.password){
-              await updatedUserData.setPassword(updatedUserData.password);
-            }
+            // updatedUserData.setPassword(updatedUserData.password);
+            updatedUserData.password = await updatedUserData.setPassword(updatedUserData.password);
+            return updatedUserData
           },
         },
         sequelize,
