@@ -10,20 +10,13 @@ router.get('/', async (req, res) => {
         return
       }
 
-      let lowStock = await Product.findAll({
-        where:{
-          [Op.or]:{
-            [Op.and]:[
-              {quantity:{[Op.lt]:10}},
-              {quantity:{[Op.gt]:0}}
-            ]
-          }
-        },
+      const damaged = await Product.findAll({
+        where:{status:"damaged"},
         raw:true
       })
 
-      if (lowStock){
-        res.status(200).json({lowStock})
+      if (damaged){
+        res.status(200).json({damaged})
       }else{
         res.status(500)
         .json({ message: 'Database Error' })

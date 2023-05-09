@@ -6,7 +6,7 @@ router.post('/login', async (req, res) => {
     let validPassword
     let userDataJson
     if (req.session.logged_in){
-      res.sendStatus(301)
+      res.sendStatus(205)
     }else{
       const userData = await Users.findOne({ where: { username: req.body.username } })
 

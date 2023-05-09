@@ -10,12 +10,13 @@ router.get('/', async (req, res) => {
         return
       }
 
-      const outStock = await Product.count({
-        where:{quantity:0}
+      const stockOut = await Product.findAll({
+        where:{quantity:0},
+        raw:true
       })
 
-      if (outStock){
-        res.status(200).json({count:outStock})
+      if (stockOut){
+        res.status(200).json({stockOut})
       }else{
         res.status(500)
         .json({ message: 'Database Error' })

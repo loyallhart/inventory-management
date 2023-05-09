@@ -1,4 +1,4 @@
-
+<script src="/js/products.js"></script>
 <div>
     <h2 class="title2">INVENTORY DASHBOARD</h2>
 </div>
@@ -28,7 +28,7 @@
       <a class="navbar-brand" href="#">
         <img src="./images/box.png" alt="products icon" width="50" height="50" class="d-inline-block align-text-top" style="padding-bottom: 10px;">
         <br>
-        <button class="btn" onclick="">Products</button>
+        <button class="btn" onclick="fetchProducts()">Products</button>
         <p id="total-products"></p>
 
 
@@ -50,7 +50,7 @@
       <a class="navbar-brand" href="#">
         <img src="./images/low.png" alt="low stock icon" width="50" height="50" class="d-inline-block align-text-top" style="padding-bottom: 10px;">
         <br>
-        <button class="btn" onclick="">Low Stock</button>
+        <button class="btn" onclick="fetchLowStock()">Low Stock</button>
         <p id="low-stock-products"></p>
       </a>
     </div>
@@ -60,7 +60,7 @@
       <a class="navbar-brand" href="#">
         <img src="./images/out-of-stock.png" alt="out of stock icon" width="50" height="50" class="d-inline-block align-text-top"  style="padding-bottom: 10px;">
         <br>
-        <button class="btn" onclick="">Out of Stock</button>
+        <button class="btn" onclick="fetchStockOut()">Out of Stock</button>
         <p id="out-of-stock-products"></p>
       </a>
     </div>
@@ -70,7 +70,7 @@
       <a class="navbar-brand" href="#">
         <img src="./images/damaged-package.png" alt="damaged inventory icon" width="50" height="50" class="d-inline-block align-text-top"  style="padding-bottom: 10px;">
         <br>
-        <button class="btn" onclick="">Damaged Inventory</button>
+        <button class="btn" onclick="fetchDamaged()">Damaged Inventory</button>
         <p id="damaged-inventory"></p>
       </a>
     </div>
@@ -110,7 +110,7 @@
 </div>
 </div> -->
 
-<script src="/js/products.js"></script>
+
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 
 
