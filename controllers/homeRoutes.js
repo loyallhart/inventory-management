@@ -1,10 +1,24 @@
 const router = require('express').Router();
 const { Product, Category } = require('../models');
+const { Sequelize } = require('sequelize')
 
 router.get('/products', async (req, res) => {
     try {
-      let products = await Product.findAll()
-      products = products.map(product => product.get({plain:true}))
+      let products = await Product.findAll({
+        attributes:[
+        'id',
+        'name',
+        'model',
+        'manufacturer',
+        'purchase_date',
+        'quantity',
+        'status',
+        [Sequelize.fn('DATE_FORMAT', Sequelize.col('purchase_date'), '%m-%d-%Y'), 'formatted_date']
+      ],
+      order: [['name','DESC']],
+      raw:true
+    })
+      // products = products.map(product => product.get({plain:true}))
       res.status(200).json({products})
     } catch (err) {
       res.status(500).json(err);
