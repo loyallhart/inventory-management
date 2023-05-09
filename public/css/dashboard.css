@@ -174,10 +174,10 @@ p{
 
 /* dropdown for table information */
 .table-information{
-background-color: rgba(228, 235, 235, 0.904);
-width: 250vh;
-height: 500px;
-margin-left: 200px;
+background-color: rgba(228, 235, 235, 0.407);
+width: 100vh;
+height: 1050px;
+margin-left: 150px;
 }
 
 #dropdown{
